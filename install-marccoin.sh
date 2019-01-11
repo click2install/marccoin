@@ -110,7 +110,7 @@ function prepare_system()
     pkg-config \
     pwgen \
     software-properties-common \
-	  tar \
+    tar \
     ufw \
     unzip \
     wget
@@ -256,11 +256,22 @@ rpcuser=${RPCUSER}
 rpcpassword=${RPCPASSWORD}
 rpcallowip=127.0.0.1
 rpcport=$[PORT+1]
+port=${PORT}
 listen=1
 server=1
 daemon=1
-staking=1
-port=${PORT}
+staking=0
+addnode=31.131.17.92
+addnode=207.148.123.101
+addnode=45.76.32.30
+addnode=212.237.33.48
+addnode=54.37.75.48
+addnode=108.61.178.208
+addnode=45.76.32.66
+addnode=209.250.255.116
+addnode=165.227.163.120
+addnode=31.220.24.50
+addnode=8.9.36.15
 EOF
 }
 

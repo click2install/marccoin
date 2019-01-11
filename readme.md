@@ -49,7 +49,7 @@ You are now ready to configure your local wallet and finish the masternode setup
  7. Once confirmed, open your wallet console and type: `masternode outputs`
  8. Open your masternode configuration file from the wallets `Tools` menu item.
  9. In your masternodes.conf file add an entry that looks like: `[address-name from #4] [ip:port of your VPS from script output] [privkey from script output] [txid from from #7] [tx output index from #7]` - 
- 10. Your masternodes.conf file entry should look like: `MN-1 127.0.0.2:31654 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0` and it must be all on one line in your masternodes config file. Make sure there are no blank lines in the file and no leading or trailing spaces on any of the lines in the file. Do not copy/paste from MS Word, if you are pasting any content use a plain text editor like Notepad, Textpad, etc. or you may get errors when the wallet starts.
+ 10. Your masternodes.conf file entry should look like: `MN-1 127.0.0.2:44004 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0` and it must be all on one line in your masternodes config file. Make sure there are no blank lines in the file and no leading or trailing spaces on any of the lines in the file. Do not copy/paste from MS Word, if you are pasting any content use a plain text editor like Notepad, Textpad, etc. or you may get errors when the wallet starts.
  11. Save and close your masternodes.conf file
  12. Close your wallet and restart
  13. Go to Masternodes
@@ -82,19 +82,19 @@ systemctl start <username>.service
 ```
 for example
 ```
-su - marccoin-mn1
+su - marcoin-mn1
 ```
 If you are asked for a password, it is in the script output you received when you installed the masternode, you can right click and paste the password (which will not be shown), then press Enter.
 The following commands can then be run against the node which is running as the `<username>` user.
 
 #### To query your masternodes status
 ```
- marccoin-cli masternode status 
+ marcoin-cli masternode status 
 ```
 
 #### To query your masternode information
 ```
- marccoin-cli getinfo
+ marcoin-cli getinfo
 ```
 
 #### To query your masternodes sync status
@@ -105,9 +105,9 @@ The following commands can then be run against the node which is running as the 
 ## Removing a masternode and user account (VPS)
 If something goes wrong with your installation or you want to remove the masternode, you can do so with the following command.
 ```
- userdel -r marccoin-mn1
+ userdel -r marcoin-mn1
 ```
-This will remove the user and its home directory. You then re-run the installation script and it will re-create everything for the `marccoin-mn1` user.
+This will remove the user and its home directory. You then re-run the installation script and it will re-create everything for the `marcoin-mn1` user.
 
 &nbsp;
 
